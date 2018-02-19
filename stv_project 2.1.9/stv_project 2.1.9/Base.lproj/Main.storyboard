@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Qc9-MM-kfF">
+                                <rect key="frame" x="0.0" y="451" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="538548567.625314">
+                                    <!--2018-01-25 04:49:27 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja"/>
+                                <connections>
+                                    <action selector="changedPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="50n-pK-ebf"/>
+                                </connections>
+                            </datePicker>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUb-kt-QSY">
+                                <rect key="frame" x="0.0" y="407" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem style="done" systemItem="done" id="xQN-yK-aF4">
+                                        <connections>
+                                            <action selector="doneBtn:" destination="BYZ-38-t0r" id="1GA-EY-IqS"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date PIcker Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipy-Gl-xh5">
+                                <rect key="frame" x="120" y="232" width="134" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="uUb-kt-QSY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2tW-x7-Guf"/>
+                            <constraint firstItem="uUb-kt-QSY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Zc-OT-tlS"/>
+                            <constraint firstItem="Qc9-MM-kfF" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="F1w-MD-6hE"/>
+                            <constraint firstItem="Qc9-MM-kfF" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gb8-qh-qOM"/>
+                            <constraint firstItem="Qc9-MM-kfF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cB9-lI-Con"/>
+                            <constraint firstItem="Qc9-MM-kfF" firstAttribute="top" secondItem="uUb-kt-QSY" secondAttribute="bottom" id="ebn-Wv-Low"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Qc9-MM-kfF" id="YWi-MA-w6B"/>
+                        <outlet property="pickerLabel" destination="Ipy-Gl-xh5" id="sPb-WW-Xxl"/>
+                        <outlet property="pickerToolbar" destination="uUb-kt-QSY" id="fOc-Zx-tMn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
