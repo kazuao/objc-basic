@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Picker Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfe-Sz-BZo">
+                                <rect key="frame" x="160" y="152" width="94" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H6C-28-Q2i">
+                                <rect key="frame" x="0.0" y="520" width="414" height="216"/>
+                            </pickerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fzh-g9-Vy1">
+                                <rect key="frame" x="0.0" y="476" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="done" id="pyS-a0-Xcn">
+                                        <connections>
+                                            <action selector="doneBtn:" destination="BYZ-38-t0r" id="DGj-sE-8bj"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H6C-28-Q2i" firstAttribute="top" secondItem="Fzh-g9-Vy1" secondAttribute="bottom" id="IVi-PJ-ZoW"/>
+                            <constraint firstItem="Fzh-g9-Vy1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aFy-e1-5P7"/>
+                            <constraint firstItem="H6C-28-Q2i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ais-FL-Z1x"/>
+                            <constraint firstItem="Fzh-g9-Vy1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="f1K-F8-rfc"/>
+                            <constraint firstItem="H6C-28-Q2i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kkY-GR-agS"/>
+                            <constraint firstItem="H6C-28-Q2i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="obF-79-G43"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sampleLabel" destination="pfe-Sz-BZo" id="9Iv-oA-auw"/>
+                        <outlet property="samplePicker" destination="H6C-28-Q2i" id="FhZ-2U-ygn"/>
+                        <outlet property="sampleToolBar" destination="Fzh-g9-Vy1" id="bGV-uv-siG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
