@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-LK-J5D">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w9c-wi-J6N">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="pcQ-pM-fsB">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="rewind" id="gtU-QV-Huj">
+                                            <connections>
+                                                <action selector="goBack" destination="Mo4-LK-J5D" id="LOv-Fy-YLj"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem systemItem="refresh" id="asR-0b-3vg">
+                                                <connections>
+                                                    <action selector="reload" destination="Mo4-LK-J5D" id="LOp-4K-6hH"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem systemItem="fastForward" id="gFe-fp-jSM">
+                                                <connections>
+                                                    <action selector="goForward" destination="Mo4-LK-J5D" id="KwD-CB-QXk"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Mo4-LK-J5D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="CEG-ZB-wRZ"/>
+                            <constraint firstItem="Mo4-LK-J5D" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="FHo-sa-Pdd"/>
+                            <constraint firstItem="w9c-wi-J6N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kwc-h4-tp6"/>
+                            <constraint firstItem="w9c-wi-J6N" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="YFy-xB-MhF"/>
+                            <constraint firstItem="Mo4-LK-J5D" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="kzi-fL-oCB"/>
+                            <constraint firstItem="w9c-wi-J6N" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mgj-XG-ZES"/>
+                            <constraint firstItem="Mo4-LK-J5D" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uV8-qW-VQ4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="Mo4-LK-J5D" id="aCD-Kh-Ci4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+</document>
