@@ -1,0 +1,775 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A53B53056602A2A030145E5 /* libPods-stv_project 2.5.8.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D47A0B49355DA75E8927742 /* libPods-stv_project 2.5.8.a */; };
+		49B6943BBFF971CCE4B52AC5 /* libPods-stv_project 2.5.8Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 30398D052FB1CC5957B1BD10 /* libPods-stv_project 2.5.8Tests.a */; };
+		649405752036B34B0063EA56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 649405742036B34B0063EA56 /* AppDelegate.m */; };
+		649405782036B34B0063EA56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649405772036B34B0063EA56 /* ViewController.m */; };
+		6494057B2036B34B0063EA56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649405792036B34B0063EA56 /* Main.storyboard */; };
+		6494057D2036B34B0063EA56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6494057C2036B34B0063EA56 /* Assets.xcassets */; };
+		649405802036B34B0063EA56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6494057E2036B34B0063EA56 /* LaunchScreen.storyboard */; };
+		649405832036B34B0063EA56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 649405822036B34B0063EA56 /* main.m */; };
+		6494058D2036B34B0063EA56 /* stv_project_2_5_8Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6494058C2036B34B0063EA56 /* stv_project_2_5_8Tests.m */; };
+		649405982036B34B0063EA56 /* stv_project_2_5_8UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 649405972036B34B0063EA56 /* stv_project_2_5_8UITests.m */; };
+		649405A72036B3AE0063EA56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 649405A62036B3AE0063EA56 /* GoogleService-Info.plist */; };
+		B418EBD1972BE3AE26E2324A /* libPods-stv_project 2.5.8UITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B17C6D5AD83E38835B95BC78 /* libPods-stv_project 2.5.8UITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		649405892036B34B0063EA56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 649405682036B34B0063EA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6494056F2036B34B0063EA56;
+			remoteInfo = "stv_project 2.5.8";
+		};
+		649405942036B34B0063EA56 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 649405682036B34B0063EA56 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6494056F2036B34B0063EA56;
+			remoteInfo = "stv_project 2.5.8";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30398D052FB1CC5957B1BD10 /* libPods-stv_project 2.5.8Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-stv_project 2.5.8Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3270EBED17C0AFB259E213F4 /* Pods-stv_project 2.5.8Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8Tests/Pods-stv_project 2.5.8Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		42586BAB05AC5A442DC85F9B /* Pods-stv_project 2.5.8Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8Tests/Pods-stv_project 2.5.8Tests.release.xcconfig"; sourceTree = "<group>"; };
+		61895DB440E6F6644D759DA8 /* Pods-stv_project 2.5.8.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8.release.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8/Pods-stv_project 2.5.8.release.xcconfig"; sourceTree = "<group>"; };
+		649405702036B34B0063EA56 /* stv_project 2.5.8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "stv_project 2.5.8.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649405732036B34B0063EA56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		649405742036B34B0063EA56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		649405762036B34B0063EA56 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		649405772036B34B0063EA56 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6494057A2036B34B0063EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6494057C2036B34B0063EA56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6494057F2036B34B0063EA56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		649405812036B34B0063EA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649405822036B34B0063EA56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		649405882036B34B0063EA56 /* stv_project 2.5.8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.5.8Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6494058C2036B34B0063EA56 /* stv_project_2_5_8Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_5_8Tests.m; sourceTree = "<group>"; };
+		6494058E2036B34B0063EA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649405932036B34B0063EA56 /* stv_project 2.5.8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.5.8UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649405972036B34B0063EA56 /* stv_project_2_5_8UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_5_8UITests.m; sourceTree = "<group>"; };
+		649405992036B34B0063EA56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		649405A52036B35F0063EA56 /* stv_project 2.5.8.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "stv_project 2.5.8.entitlements"; sourceTree = "<group>"; };
+		649405A62036B3AE0063EA56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		72E3E97C6E25BAB4494CC28D /* Pods-stv_project 2.5.8UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8UITests/Pods-stv_project 2.5.8UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8D47A0B49355DA75E8927742 /* libPods-stv_project 2.5.8.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-stv_project 2.5.8.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		954E308C3B27ACE7E22CD8D8 /* Pods-stv_project 2.5.8.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8.debug.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8/Pods-stv_project 2.5.8.debug.xcconfig"; sourceTree = "<group>"; };
+		B17C6D5AD83E38835B95BC78 /* libPods-stv_project 2.5.8UITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-stv_project 2.5.8UITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9FFE6FC4512DA3799F73B10 /* Pods-stv_project 2.5.8UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-stv_project 2.5.8UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-stv_project 2.5.8UITests/Pods-stv_project 2.5.8UITests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6494056D2036B34B0063EA56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A53B53056602A2A030145E5 /* libPods-stv_project 2.5.8.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649405852036B34B0063EA56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49B6943BBFF971CCE4B52AC5 /* libPods-stv_project 2.5.8Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649405902036B34B0063EA56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B418EBD1972BE3AE26E2324A /* libPods-stv_project 2.5.8UITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		649405672036B34B0063EA56 = {
+			isa = PBXGroup;
+			children = (
+				649405722036B34B0063EA56 /* stv_project 2.5.8 */,
+				6494058B2036B34B0063EA56 /* stv_project 2.5.8Tests */,
+				649405962036B34B0063EA56 /* stv_project 2.5.8UITests */,
+				649405712036B34B0063EA56 /* Products */,
+				6BFF09F20FA7CAB72FD31F8D /* Pods */,
+				6BEC0EE48882B19B905A550E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		649405712036B34B0063EA56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				649405702036B34B0063EA56 /* stv_project 2.5.8.app */,
+				649405882036B34B0063EA56 /* stv_project 2.5.8Tests.xctest */,
+				649405932036B34B0063EA56 /* stv_project 2.5.8UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		649405722036B34B0063EA56 /* stv_project 2.5.8 */ = {
+			isa = PBXGroup;
+			children = (
+				649405A52036B35F0063EA56 /* stv_project 2.5.8.entitlements */,
+				649405732036B34B0063EA56 /* AppDelegate.h */,
+				649405742036B34B0063EA56 /* AppDelegate.m */,
+				649405762036B34B0063EA56 /* ViewController.h */,
+				649405772036B34B0063EA56 /* ViewController.m */,
+				649405792036B34B0063EA56 /* Main.storyboard */,
+				6494057C2036B34B0063EA56 /* Assets.xcassets */,
+				6494057E2036B34B0063EA56 /* LaunchScreen.storyboard */,
+				649405812036B34B0063EA56 /* Info.plist */,
+				649405A62036B3AE0063EA56 /* GoogleService-Info.plist */,
+				649405822036B34B0063EA56 /* main.m */,
+			);
+			path = "stv_project 2.5.8";
+			sourceTree = "<group>";
+		};
+		6494058B2036B34B0063EA56 /* stv_project 2.5.8Tests */ = {
+			isa = PBXGroup;
+			children = (
+				6494058C2036B34B0063EA56 /* stv_project_2_5_8Tests.m */,
+				6494058E2036B34B0063EA56 /* Info.plist */,
+			);
+			path = "stv_project 2.5.8Tests";
+			sourceTree = "<group>";
+		};
+		649405962036B34B0063EA56 /* stv_project 2.5.8UITests */ = {
+			isa = PBXGroup;
+			children = (
+				649405972036B34B0063EA56 /* stv_project_2_5_8UITests.m */,
+				649405992036B34B0063EA56 /* Info.plist */,
+			);
+			path = "stv_project 2.5.8UITests";
+			sourceTree = "<group>";
+		};
+		6BEC0EE48882B19B905A550E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D47A0B49355DA75E8927742 /* libPods-stv_project 2.5.8.a */,
+				30398D052FB1CC5957B1BD10 /* libPods-stv_project 2.5.8Tests.a */,
+				B17C6D5AD83E38835B95BC78 /* libPods-stv_project 2.5.8UITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BFF09F20FA7CAB72FD31F8D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				954E308C3B27ACE7E22CD8D8 /* Pods-stv_project 2.5.8.debug.xcconfig */,
+				61895DB440E6F6644D759DA8 /* Pods-stv_project 2.5.8.release.xcconfig */,
+				3270EBED17C0AFB259E213F4 /* Pods-stv_project 2.5.8Tests.debug.xcconfig */,
+				42586BAB05AC5A442DC85F9B /* Pods-stv_project 2.5.8Tests.release.xcconfig */,
+				72E3E97C6E25BAB4494CC28D /* Pods-stv_project 2.5.8UITests.debug.xcconfig */,
+				C9FFE6FC4512DA3799F73B10 /* Pods-stv_project 2.5.8UITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6494056F2036B34B0063EA56 /* stv_project 2.5.8 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6494059C2036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8" */;
+			buildPhases = (
+				7685EAE2F977EAD180E9C3EE /* [CP] Check Pods Manifest.lock */,
+				6494056C2036B34B0063EA56 /* Sources */,
+				6494056D2036B34B0063EA56 /* Frameworks */,
+				6494056E2036B34B0063EA56 /* Resources */,
+				882D2C41B73345890C614E5D /* [CP] Embed Pods Frameworks */,
+				50171319FE7B89A58FABFDCC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "stv_project 2.5.8";
+			productName = "stv_project 2.5.8";
+			productReference = 649405702036B34B0063EA56 /* stv_project 2.5.8.app */;
+			productType = "com.apple.product-type.application";
+		};
+		649405872036B34B0063EA56 /* stv_project 2.5.8Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6494059F2036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8Tests" */;
+			buildPhases = (
+				DEC00860EF6AF95E61039C75 /* [CP] Check Pods Manifest.lock */,
+				649405842036B34B0063EA56 /* Sources */,
+				649405852036B34B0063EA56 /* Frameworks */,
+				649405862036B34B0063EA56 /* Resources */,
+				01819269B7C2F4ACA4910900 /* [CP] Embed Pods Frameworks */,
+				904CCADDEB41F1CE64CCFDED /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6494058A2036B34B0063EA56 /* PBXTargetDependency */,
+			);
+			name = "stv_project 2.5.8Tests";
+			productName = "stv_project 2.5.8Tests";
+			productReference = 649405882036B34B0063EA56 /* stv_project 2.5.8Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		649405922036B34B0063EA56 /* stv_project 2.5.8UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 649405A22036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8UITests" */;
+			buildPhases = (
+				B212665EE9E89EC7B04028D5 /* [CP] Check Pods Manifest.lock */,
+				6494058F2036B34B0063EA56 /* Sources */,
+				649405902036B34B0063EA56 /* Frameworks */,
+				649405912036B34B0063EA56 /* Resources */,
+				4D2E8A3AEFA6CACCFD3791CA /* [CP] Embed Pods Frameworks */,
+				45E99638D331F78072D01812 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				649405952036B34B0063EA56 /* PBXTargetDependency */,
+			);
+			name = "stv_project 2.5.8UITests";
+			productName = "stv_project 2.5.8UITests";
+			productReference = 649405932036B34B0063EA56 /* stv_project 2.5.8UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		649405682036B34B0063EA56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = kazua;
+				TargetAttributes = {
+					6494056F2036B34B0063EA56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					649405872036B34B0063EA56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6494056F2036B34B0063EA56;
+					};
+					649405922036B34B0063EA56 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6494056F2036B34B0063EA56;
+					};
+				};
+			};
+			buildConfigurationList = 6494056B2036B34B0063EA56 /* Build configuration list for PBXProject "stv_project 2.5.8" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 649405672036B34B0063EA56;
+			productRefGroup = 649405712036B34B0063EA56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6494056F2036B34B0063EA56 /* stv_project 2.5.8 */,
+				649405872036B34B0063EA56 /* stv_project 2.5.8Tests */,
+				649405922036B34B0063EA56 /* stv_project 2.5.8UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6494056E2036B34B0063EA56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649405802036B34B0063EA56 /* LaunchScreen.storyboard in Resources */,
+				649405A72036B3AE0063EA56 /* GoogleService-Info.plist in Resources */,
+				6494057D2036B34B0063EA56 /* Assets.xcassets in Resources */,
+				6494057B2036B34B0063EA56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649405862036B34B0063EA56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649405912036B34B0063EA56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01819269B7C2F4ACA4910900 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8Tests/Pods-stv_project 2.5.8Tests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E99638D331F78072D01812 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8UITests/Pods-stv_project 2.5.8UITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D2E8A3AEFA6CACCFD3791CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8UITests/Pods-stv_project 2.5.8UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50171319FE7B89A58FABFDCC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8/Pods-stv_project 2.5.8-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7685EAE2F977EAD180E9C3EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stv_project 2.5.8-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		882D2C41B73345890C614E5D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8/Pods-stv_project 2.5.8-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		904CCADDEB41F1CE64CCFDED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-stv_project 2.5.8Tests/Pods-stv_project 2.5.8Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B212665EE9E89EC7B04028D5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stv_project 2.5.8UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEC00860EF6AF95E61039C75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-stv_project 2.5.8Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6494056C2036B34B0063EA56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649405782036B34B0063EA56 /* ViewController.m in Sources */,
+				649405832036B34B0063EA56 /* main.m in Sources */,
+				649405752036B34B0063EA56 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		649405842036B34B0063EA56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6494058D2036B34B0063EA56 /* stv_project_2_5_8Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6494058F2036B34B0063EA56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				649405982036B34B0063EA56 /* stv_project_2_5_8UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6494058A2036B34B0063EA56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6494056F2036B34B0063EA56 /* stv_project 2.5.8 */;
+			targetProxy = 649405892036B34B0063EA56 /* PBXContainerItemProxy */;
+		};
+		649405952036B34B0063EA56 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6494056F2036B34B0063EA56 /* stv_project 2.5.8 */;
+			targetProxy = 649405942036B34B0063EA56 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		649405792036B34B0063EA56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6494057A2036B34B0063EA56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6494057E2036B34B0063EA56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6494057F2036B34B0063EA56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6494059A2036B34B0063EA56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6494059B2036B34B0063EA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6494059D2036B34B0063EA56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 954E308C3B27ACE7E22CD8D8 /* Pods-stv_project 2.5.8.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "stv_project 2.5.8/stv_project 2.5.8.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.firebasePush.aoki";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6494059E2036B34B0063EA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61895DB440E6F6644D759DA8 /* Pods-stv_project 2.5.8.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "stv_project 2.5.8/stv_project 2.5.8.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.st-ventures.firebasePush.aoki";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		649405A02036B34B0063EA56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3270EBED17C0AFB259E213F4 /* Pods-stv_project 2.5.8Tests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st-ventures.stv-project-2-5-8Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stv_project 2.5.8.app/stv_project 2.5.8";
+			};
+			name = Debug;
+		};
+		649405A12036B34B0063EA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42586BAB05AC5A442DC85F9B /* Pods-stv_project 2.5.8Tests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st-ventures.stv-project-2-5-8Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stv_project 2.5.8.app/stv_project 2.5.8";
+			};
+			name = Release;
+		};
+		649405A32036B34B0063EA56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 72E3E97C6E25BAB4494CC28D /* Pods-stv_project 2.5.8UITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st-ventures.stv-project-2-5-8UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stv_project 2.5.8";
+			};
+			name = Debug;
+		};
+		649405A42036B34B0063EA56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9FFE6FC4512DA3799F73B10 /* Pods-stv_project 2.5.8UITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PCCZJUYRT6;
+				INFOPLIST_FILE = "stv_project 2.5.8UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.st-ventures.stv-project-2-5-8UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "stv_project 2.5.8";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6494056B2036B34B0063EA56 /* Build configuration list for PBXProject "stv_project 2.5.8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6494059A2036B34B0063EA56 /* Debug */,
+				6494059B2036B34B0063EA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6494059C2036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6494059D2036B34B0063EA56 /* Debug */,
+				6494059E2036B34B0063EA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6494059F2036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649405A02036B34B0063EA56 /* Debug */,
+				649405A12036B34B0063EA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		649405A22036B34B0063EA56 /* Build configuration list for PBXNativeTarget "stv_project 2.5.8UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				649405A32036B34B0063EA56 /* Debug */,
+				649405A42036B34B0063EA56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 649405682036B34B0063EA56 /* Project object */;
+}
