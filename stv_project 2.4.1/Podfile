@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'stv_project 2.4.1' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for stv_project 2.4.1
+  pod 'FMDB/standalone'
+
+  target 'stv_project 2.4.1Tests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'stv_project 2.4.1UITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
