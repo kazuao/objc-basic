@@ -6,8 +6,10 @@ target 'stv_project 2.5.8' do
   # use_frameworks!
 
   # Pods for stv_project 2.5.8
-  pod 'Firebase/Core'
-  pod 'Firebase/Messaging'
+  pod 'Firebase' , '~> 4.0'
+  pod 'Firebase/AdMob' , '~> 4.0'
+  pod 'Firebase/RemoteConfig' , '~> 4.0'
+  pod 'Firebase/Messaging' , '~> 4.0'
 
   target 'stv_project 2.5.8Tests' do
     inherit! :search_paths

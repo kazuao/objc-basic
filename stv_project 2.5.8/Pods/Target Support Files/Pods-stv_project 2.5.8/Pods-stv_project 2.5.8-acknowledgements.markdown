@@ -5,6 +5,10 @@ This application makes use of the following third party libraries:
 
 Copyright 2018 Google
 
+## FirebaseABTesting
+
+Copyright 2017 Google
+
 ## FirebaseAnalytics
 
 Copyright 2018 Google
@@ -18,6 +22,14 @@ Copyright 2018 Google
 Copyright 2018 Google
 
 ## FirebaseMessaging
+
+Copyright 2018 Google
+
+## FirebaseRemoteConfig
+
+Copyright 2018 Google
+
+## Google-Mobile-Ads-SDK
 
 Copyright 2018 Google
 
