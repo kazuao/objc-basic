@@ -46,13 +46,14 @@
     annotation.coordinate = CLLocationCoordinate2DMake(35.623655, 139.724858);
     annotation.title = @"スマートテックベンチャーズ";
     annotation.subtitle = @"東京都品川区大崎5-1-5 4F";
+
     [self.mapView addAnnotation:annotation];
     
     [self.view addSubview:self.mapView];
 }
 
 // annotation用のデリゲートメソッド
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id)annotation {
     
     // 識別子を定義
     static NSString *Identifier = @"PinAnnotationIdentifier";
@@ -61,10 +62,13 @@
     pinView = (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:Identifier];
     
     if (!pinView) {
-        pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:Identifier];
+        annotation = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:Identifier];
         return pinView;
     }
+
     pinView.annotation = annotation;
+    pinView.canShowCallout = YES;
+
     return pinView;
 }
 
