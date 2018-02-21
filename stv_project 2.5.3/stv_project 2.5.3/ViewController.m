@@ -33,7 +33,7 @@
     NSError *error = [NSError new];
     
     @try {
-        AVCaptureDeviceInput* input = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&error];
+        AVCaptureDeviceInput *input = [[AVCaptureDeviceInput alloc] initWithDevice:device error:&error];
         
         if ([self.captureSesssion canAddInput:input]) {
             [self.captureSesssion addInput:input];
@@ -53,10 +53,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 //撮影ボタンを押した際に呼ばれるメソッド。
 - (IBAction)takePhoto:(UIButton *)sender {
     
@@ -65,20 +61,19 @@
     [self.stillImageOutput capturePhotoWithSettings:settings delegate:self];
 }
 
-#pragma mark AVCapturePhotoCaptureDelegate
-- (void)captureOutput:(AVCapturePhotoOutput *)captureOutput
-    didFinishProcessingPhotoSampleBuffer:(nullable CMSampleBufferRef)photoSampleBuffer
-                previewPhotoSampleBuffer:(nullable CMSampleBufferRef)previewPhotoSampleBuffer
-                        resolvedSettings:(nonnull AVCaptureResolvedPhotoSettings *)resolvedSettings
-                         bracketSettings:(nullable AVCaptureBracketedStillImageSettings *)bracketSettings
-                                   error:(nullable NSError *)error
-{
-    NSData *photoData = [AVCapturePhotoOutput JPEGPhotoDataRepresentationForJPEGSampleBuffer:photoSampleBuffer
-                                                                    previewPhotoSampleBuffer:previewPhotoSampleBuffer];
+// 写真キャプチャの結果を
+- (void)captureOutput:(AVCapturePhotoOutput *)output didFinishProcessingPhoto:(AVCapturePhoto *)photo error:(NSError *)error {
     
-    UIImage *resultImage = [[UIImage alloc] initWithData:photoData];
+    // 適した形に自動的に変換してくれる
+    NSData *imageData = [photo fileDataRepresentation];
+    UIImage *resultImage = [UIImage imageWithData:imageData];
+
     self.photoView.image = resultImage;
     UIImageWriteToSavedPhotosAlbum(resultImage, nil, nil, nil);
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
 }
 
 @end
