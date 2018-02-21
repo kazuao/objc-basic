@@ -30,9 +30,9 @@
     NSInteger delete_false = 0;
     
     NSString *createTableSql =
-    @"CREATE TABLE IF NOT EXISTS weatherInfo(wt_id INTEGER PRIMARY KEY,wt_state TEXT,wt_date TEXT,wt_icon TEXT,created DATE,modified DATE,delete_flg TEXT);";
+    @"CREATE TABLE IF NOT EXISTS weatherInfo(wt_id INTEGER PRIMARY KEY,wt_state TEXT,wt_date TEXT UNIQUE,wt_icon TEXT,created DATE,modified DATE,delete_flg TEXT);";
     NSString *insertTableSql =
-    @"INSERT INTO weatherInfo(`wt_state`,`wt_date`,`wt_icon`,`created`,`modified`,`delete_flg`) VALUES(:wt_state,:wt_date,:wt_icon,:created,:modified,:delete_flg);";
+    @"INSERT OR REPLACE INTO weatherInfo(`wt_state`,`wt_date`,`wt_icon`,`created`,`modified`,`delete_flg`) VALUES(:wt_state,:wt_date,:wt_icon,:created,:modified,:delete_flg);";
     
     [fm open];
     
@@ -73,6 +73,8 @@
     NSString *filePath = [dir stringByAppendingPathComponent:@"weather.db"];
     FMDatabase *fm = [[FMDatabase alloc] initWithPath:filePath];
     
+    NSLog(@"%@", NSHomeDirectory());
+    
     NSString *selectTableSql =
     @"SELECT `wt_id`, `wt_state`,`wt_date`,`wt_icon` FROM weatherInfo WHERE `delete_flg` = 0 ORDER BY `wt_id` asc;";
     
@@ -91,6 +93,7 @@
     }
     [results close];
     [fm close];
+    
 }
 
 @end

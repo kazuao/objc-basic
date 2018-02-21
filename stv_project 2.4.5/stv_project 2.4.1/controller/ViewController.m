@@ -44,6 +44,8 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
 }
 
 -(void)viewWillAppear:(BOOL)animated {
+    [self.weatherTable reloadData];
+    [super viewWillAppear:animated];
     
     self.provider = [TableViewProvider new];
     self.weatherTable.dataSource = self.provider;
@@ -51,8 +53,6 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
     [self.dbModel fetchWeather];
     
     self.provider.weatherLists = [self.dbModel.weatherArr mutableCopy];
-
-    [self.weatherTable reloadData];
 }
 
 // 登録ボタンを押すとDBに登録する
@@ -63,7 +63,7 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
     [self.dbModel registerWeather:self.registerContents];
 
     [self successAlert];
-    [self.weatherTable reloadData];
+    [self.dbModel fetchWeather];
 }
 
 - (void)successAlert {
@@ -73,8 +73,12 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
                                           message:@"登録に成功しました。"
                                           preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-    
-    [self presentViewController:alertController animated:YES completion:nil];
+
+    [self presentViewController:alertController animated:YES completion:^{
+        [self.dbModel fetchWeather];
+        self.provider.weatherLists = [self.dbModel.weatherArr mutableCopy];
+        [self reloadData];
+    }];
 }
 
 - (void)reloadData {

@@ -36,7 +36,6 @@
         
         dispatch_async(q_main, ^{
             cell.cellImg.image = imgData;
-            [cell layoutSubviews];
         });
     });
     cell.cellDateLabel.text = self.weatherLists[indexPath.row].wt_date;

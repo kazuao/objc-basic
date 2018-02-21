@@ -14,7 +14,6 @@
 
 - (id)connectAPI {
     
-    self.viewController = [ViewController new];
     self.weather = [NSMutableArray new];
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

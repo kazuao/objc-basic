@@ -11,8 +11,6 @@
 
 @interface ModelAPI : NSObject
 
-@property ViewController *viewController;
-
 @property (nonatomic) NSMutableArray *weather;
 @property NSArray *forecasts;
 @property NSMutableArray *weatherClasses;

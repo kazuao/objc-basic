@@ -131,6 +131,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6462FFFA203BFABB00308D72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6462FFFF203BFC0800308D72 /* DAO */,
+				647D910320299F35001AFC64 /* Weather.h */,
+				647D910420299F35001AFC64 /* Weather.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6462FFFB203BFACC00308D72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				641C979A202D740E00B72582 /* TableViewProvider.h */,
+				641C979B202D740E00B72582 /* TableViewProvider.m */,
+				647D910020299374001AFC64 /* WeatherTableViewCell.h */,
+				647D910120299374001AFC64 /* WeatherTableViewCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6462FFFC203BFB0100308D72 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				647D90932029669E001AFC64 /* ViewController.h */,
+				647D90942029669E001AFC64 /* ViewController.m */,
+				647D90962029669E001AFC64 /* Main.storyboard */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		6462FFFD203BFB3300308D72 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				647D90902029669E001AFC64 /* AppDelegate.h */,
+				647D90912029669E001AFC64 /* AppDelegate.m */,
+				647D90992029669E001AFC64 /* Assets.xcassets */,
+				647D909F2029669E001AFC64 /* main.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		6462FFFE203BFB5A00308D72 /* StartUp */ = {
+			isa = PBXGroup;
+			children = (
+				647D909B2029669E001AFC64 /* LaunchScreen.storyboard */,
+			);
+			path = StartUp;
+			sourceTree = "<group>";
+		};
+		6462FFFF203BFC0800308D72 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				641C9797202D727000B72582 /* Model.h */,
+				641C9798202D727000B72582 /* Model.m */,
+				641C9707202D23BB00B72582 /* ModelAPI.h */,
+				641C9708202D23BB00B72582 /* ModelAPI.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
 		647D90842029669D001AFC64 = {
 			isa = PBXGroup;
 			children = (
@@ -156,25 +217,12 @@
 		647D908F2029669E001AFC64 /* stv_project 2.4.1 */ = {
 			isa = PBXGroup;
 			children = (
-				647D90902029669E001AFC64 /* AppDelegate.h */,
-				647D90912029669E001AFC64 /* AppDelegate.m */,
-				647D910320299F35001AFC64 /* Weather.h */,
-				647D910420299F35001AFC64 /* Weather.m */,
-				641C9797202D727000B72582 /* Model.h */,
-				641C9798202D727000B72582 /* Model.m */,
-				641C9707202D23BB00B72582 /* ModelAPI.h */,
-				641C9708202D23BB00B72582 /* ModelAPI.m */,
-				641C979A202D740E00B72582 /* TableViewProvider.h */,
-				641C979B202D740E00B72582 /* TableViewProvider.m */,
-				647D90932029669E001AFC64 /* ViewController.h */,
-				647D90942029669E001AFC64 /* ViewController.m */,
-				647D910020299374001AFC64 /* WeatherTableViewCell.h */,
-				647D910120299374001AFC64 /* WeatherTableViewCell.m */,
-				647D90962029669E001AFC64 /* Main.storyboard */,
-				647D909B2029669E001AFC64 /* LaunchScreen.storyboard */,
-				647D90992029669E001AFC64 /* Assets.xcassets */,
+				6462FFFA203BFABB00308D72 /* Model */,
+				6462FFFB203BFACC00308D72 /* View */,
+				6462FFFC203BFB0100308D72 /* controller */,
+				6462FFFD203BFB3300308D72 /* Support */,
+				6462FFFE203BFB5A00308D72 /* StartUp */,
 				647D909E2029669E001AFC64 /* Info.plist */,
-				647D909F2029669E001AFC64 /* main.m */,
 			);
 			path = "stv_project 2.4.1";
 			sourceTree = "<group>";
