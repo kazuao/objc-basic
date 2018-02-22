@@ -16,6 +16,7 @@
 		64C62034203E51EF00067A65 /* test_1monthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C62033203E51EF00067A65 /* test_1monthTests.m */; };
 		64C6203F203E51EF00067A65 /* test_1monthUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C6203E203E51EF00067A65 /* test_1monthUITests.m */; };
 		64C6204E203E53D900067A65 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C6204D203E53D900067A65 /* CalendarViewController.m */; };
+		64C62051203E5FA900067A65 /* CalendarViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C62050203E5FA900067A65 /* CalendarViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		64C62040203E51F000067A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64C6204C203E53D900067A65 /* CalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		64C6204D203E53D900067A65 /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		64C6204F203E5FA900067A65 /* CalendarViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewCell.h; sourceTree = "<group>"; };
+		64C62050203E5FA900067A65 /* CalendarViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,17 +107,11 @@
 		64C62019203E51EF00067A65 /* test_1month */ = {
 			isa = PBXGroup;
 			children = (
-				64C6201A203E51EF00067A65 /* AppDelegate.h */,
-				64C6201B203E51EF00067A65 /* AppDelegate.m */,
-				64C6201D203E51EF00067A65 /* ViewController.h */,
-				64C6201E203E51EF00067A65 /* ViewController.m */,
-				64C6204C203E53D900067A65 /* CalendarViewController.h */,
-				64C6204D203E53D900067A65 /* CalendarViewController.m */,
-				64C62020203E51EF00067A65 /* Main.storyboard */,
-				64C62023203E51EF00067A65 /* Assets.xcassets */,
-				64C62025203E51EF00067A65 /* LaunchScreen.storyboard */,
+				64C62053203EB30600067A65 /* Model */,
+				64C62052203EB2E700067A65 /* ViewController */,
+				64C62055203EB31F00067A65 /* Support */,
+				64C62056203EB34900067A65 /* StartUp */,
 				64C62028203E51EF00067A65 /* Info.plist */,
-				64C62029203E51EF00067A65 /* main.m */,
 			);
 			path = test_1month;
 			sourceTree = "<group>";
@@ -135,6 +132,54 @@
 				64C62040203E51F000067A65 /* Info.plist */,
 			);
 			path = test_1monthUITests;
+			sourceTree = "<group>";
+		};
+		64C62052203EB2E700067A65 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				64C6201D203E51EF00067A65 /* ViewController.h */,
+				64C6201E203E51EF00067A65 /* ViewController.m */,
+				64C6204C203E53D900067A65 /* CalendarViewController.h */,
+				64C6204D203E53D900067A65 /* CalendarViewController.m */,
+				64C62020203E51EF00067A65 /* Main.storyboard */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		64C62053203EB30600067A65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				64C62054203EB30C00067A65 /* DAO */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64C62054203EB30C00067A65 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				64C6204F203E5FA900067A65 /* CalendarViewCell.h */,
+				64C62050203E5FA900067A65 /* CalendarViewCell.m */,
+			);
+			path = DAO;
+			sourceTree = "<group>";
+		};
+		64C62055203EB31F00067A65 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				64C6201A203E51EF00067A65 /* AppDelegate.h */,
+				64C6201B203E51EF00067A65 /* AppDelegate.m */,
+				64C62023203E51EF00067A65 /* Assets.xcassets */,
+				64C62029203E51EF00067A65 /* main.m */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		64C62056203EB34900067A65 /* StartUp */ = {
+			isa = PBXGroup;
+			children = (
+				64C62025203E51EF00067A65 /* LaunchScreen.storyboard */,
+			);
+			path = StartUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				64C62051203E5FA900067A65 /* CalendarViewCell.m in Sources */,
 				64C6204E203E53D900067A65 /* CalendarViewController.m in Sources */,
 				64C6201F203E51EF00067A65 /* ViewController.m in Sources */,
 				64C6202A203E51EF00067A65 /* main.m in Sources */,
