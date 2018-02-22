@@ -37,14 +37,12 @@ const CGFloat CellMargin = 0.2f;
 
 @interface CalendarViewController ()
 
-@property (nonatomic, strong) NSDate *selectedDate;
-@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (strong, nonatomic) NSDate *selectedDate;
+@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
 
 @end
 
 @implementation CalendarViewController
-
-#pragma mark - LifeCycle methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -56,8 +54,7 @@ const CGFloat CellMargin = 0.2f;
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - Action methods
-
+//// 画面の切り替え
 // 前の月
 - (IBAction)didTapPrevButton:(id)sender {
     
@@ -90,7 +87,7 @@ const CGFloat CellMargin = 0.2f;
     
     NSDateComponents *components =
     [[NSCalendar currentCalendar]
-        components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self.selectedDate];
+     components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self.selectedDate];
     components.day = 1;
     
     NSDate *firstDateMonth = [[NSCalendar currentCalendar] dateFromComponents:components];
@@ -128,7 +125,6 @@ const CGFloat CellMargin = 0.2f;
         UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                                   withReuseIdentifier:@"Header"
                                                                                          forIndexPath:indexPath];
-        //（ここにheaderViewの中身の定義をindexPath.sectionなんかをベースに設定してやる）
         reusableview = headerView;
     }
     return reusableview;
@@ -137,7 +133,6 @@ const CGFloat CellMargin = 0.2f;
 // cellの列数を設定
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    // calculate number of weeks
     NSRange rangeOfWeeks = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth
                                                               inUnit:NSCalendarUnitMonth
                                                              forDate:self.firstDateOfMonth];
@@ -154,6 +149,7 @@ const CGFloat CellMargin = 0.2f;
     
     NSDateFormatter *formatter = [NSDateFormatter new];
     formatter.dateFormat = @"d";
+    // カレンダーの日付をセット
     cell.dateLabel.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
     
     NSString *dateWeek = [self getWeekday:[self dateForCellAtIndexPath:indexPath]];
@@ -167,9 +163,8 @@ const CGFloat CellMargin = 0.2f;
     }
     
     // 表示しているカレンダーの日付から月を取得
-    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents* comps = [calendar components:NSCalendarUnitMonth fromDate:[self dateForCellAtIndexPath:indexPath]];
-    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitMonth fromDate:[self dateForCellAtIndexPath:indexPath]];
     // 表示しているカレンダーの月を取得
     NSArray *params = [self.title componentsSeparatedByString:@"年"];
     int length = (int)[params[1] length];
@@ -180,27 +175,25 @@ const CGFloat CellMargin = 0.2f;
     if (comps.month != thisMonth) {
         cell.dateLabel.textColor = [UIColor grayColor];
     }
-    
     return cell;
 }
 
 // 曜日を取得する
 - (id)getWeekday:date {
     
-    NSCalendar* calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents* comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
-    NSDateFormatter* df = [[NSDateFormatter alloc] init];
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
     df.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
     
     //comps.weekdayは 1-7の値が取得できるので-1する
-    NSString* weekDayStr = df.shortWeekdaySymbols[comps.weekday-1];
+    NSString *weekDayStr = df.shortWeekdaySymbols[comps.weekday-1];
     return weekDayStr;
 }
 
-#pragma mark - UICollectionViewDelegateFlowLayout methods
-
 // cellのサイズ
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
+                                            sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger numberOfMargin = 8;
     CGFloat width = floorf((collectionView.frame.size.width - CellMargin * numberOfMargin) / DaysPerWeek);
@@ -209,17 +202,20 @@ const CGFloat CellMargin = 0.2f;
     return CGSizeMake(width, height);
 }
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
+                                                  insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(CellMargin, CellMargin, CellMargin, CellMargin);
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
+                                minimumLineSpacingForSectionAtIndex:(NSInteger)section
 {
     return CellMargin;
 }
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
+                           minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
 {
     return CellMargin;
 }
