@@ -8,37 +8,16 @@
 
 #import "CalendarViewController.h"
 #import "CalendarViewCell.h"
-
-// Extension(よくわからない)
-@implementation NSDate (Extension)
-
-- (NSDate *)monthAgoDate {
-    
-    NSInteger addValue = -1;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [NSDateComponents new];
-    dateComponents.month = addValue;
-    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
-}
-
-- (NSDate *)monthLaterDate {
-    
-    NSInteger addValue = 1;
-    NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [NSDateComponents new];
-    dateComponents.month = addValue;
-    return [calendar dateByAddingComponents:dateComponents toDate:self options:0];
-}
-
-@end
+#import "CollectionViewProvider.h"
 
 const NSUInteger DaysPerWeek = 7;
 const CGFloat CellMargin = 0.2f;
 
 @interface CalendarViewController ()
 
+@property (strong, nonatomic) IBOutlet UICollectionView *myCollectionView;
 @property (strong, nonatomic) NSDate *selectedDate;
-@property (weak, nonatomic) IBOutlet UICollectionView *myCollectionView;
+@property (strong, nonatomic) CollectionViewProvider *collectionVP;
 
 @end
 
@@ -46,8 +25,16 @@ const CGFloat CellMargin = 0.2f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     self.selectedDate  = [NSDate date];
+}
+- (void)viewWillAppear:(BOOL)animated {
+    [self.myCollectionView reloadData];
+    [super viewWillAppear:animated];
+    
+    self.collectionVP = [CollectionViewProvider new];
+    self.myCollectionView.delegate   = self.collectionVP;
+    self.myCollectionView.dataSource = self.collectionVP;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +45,7 @@ const CGFloat CellMargin = 0.2f;
 // 前の月
 - (IBAction)didTapPrevButton:(id)sender {
     
-    self.selectedDate = [self.selectedDate monthAgoDate];
+    self.selectedDate = [self monthAgoDate];
     
     [self.myCollectionView reloadData];
 }
@@ -66,9 +53,26 @@ const CGFloat CellMargin = 0.2f;
 // 次の月
 - (IBAction)didTapNextButton:(id)sender {
     
-    self.selectedDate = [self.selectedDate monthLaterDate];
+    self.selectedDate = [self monthLaterDate];
     
     [self.myCollectionView reloadData];
+}
+- (NSDate *)monthAgoDate {
+    
+    NSInteger addValue = -1;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [NSDateComponents new];
+    dateComponents.month = addValue;
+    return [calendar dateByAddingComponents:dateComponents toDate:self.selectedDate options:0];
+}
+
+- (NSDate *)monthLaterDate {
+    
+    NSInteger addValue = 1;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *dateComponents = [NSDateComponents new];
+    dateComponents.month = addValue;
+    return [calendar dateByAddingComponents:dateComponents toDate:self.selectedDate options:0];
 }
 
 // 現在の日付を取得し、タイトルをセット
@@ -78,7 +82,7 @@ const CGFloat CellMargin = 0.2f;
     _selectedDate = selectedDate;
     
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy年M日";
+    formatter.dateFormat = @"yyyy年M月";
     self.title = [formatter stringFromDate:selectedDate];
 }
 
@@ -112,113 +116,4 @@ const CGFloat CellMargin = 0.2f;
     return date;
 }
 
-// collectionViewのheaderの設定
-- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
-           viewForSupplementaryElementOfKind:(NSString *)kind
-                                 atIndexPath:(NSIndexPath *)indexPath
-{
-    // セクションヘッダ・フッタを引っ張ってくる
-    UICollectionReusableView *reusableview = nil;
-    
-    if (kind == UICollectionElementKindSectionHeader) {
-        // --- ヘッダ
-        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
-                                                                                  withReuseIdentifier:@"Header"
-                                                                                         forIndexPath:indexPath];
-        reusableview = headerView;
-    }
-    return reusableview;
-}
-
-// cellの列数を設定
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
-    NSRange rangeOfWeeks = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitWeekOfMonth
-                                                              inUnit:NSCalendarUnitMonth
-                                                             forDate:self.firstDateOfMonth];
-    NSUInteger numberOfWeeks = rangeOfWeeks.length;
-    NSInteger numberOfItems = numberOfWeeks * DaysPerWeek;
-    
-    return numberOfItems;
-}
-
-// cellの設定
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    
-    CalendarViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    
-    NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"d";
-    // カレンダーの日付をセット
-    cell.dateLabel.text = [formatter stringFromDate:[self dateForCellAtIndexPath:indexPath]];
-    
-    NSString *dateWeek = [self getWeekday:[self dateForCellAtIndexPath:indexPath]];
-    // 日曜日は赤色にする
-    if ([dateWeek isEqual:@"日"]) {
-        cell.dateLabel.textColor = [UIColor redColor];
-    }
-    // 土曜日は青色にする
-    if ([dateWeek isEqual:@"土"]) {
-        cell.dateLabel.textColor = [UIColor blueColor];
-    }
-    
-    // 表示しているカレンダーの日付から月を取得
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *comps = [calendar components:NSCalendarUnitMonth fromDate:[self dateForCellAtIndexPath:indexPath]];
-    // 表示しているカレンダーの月を取得
-    NSArray *params = [self.title componentsSeparatedByString:@"年"];
-    int length = (int)[params[1] length];
-    NSString *str = [params[1] substringToIndex:(length-1)];
-    NSInteger thisMonth = [str integerValue];
-    
-    // 現在の月以外はグレーに
-    if (comps.month != thisMonth) {
-        cell.dateLabel.textColor = [UIColor grayColor];
-    }
-    return cell;
-}
-
-// 曜日を取得する
-- (id)getWeekday:date {
-    
-    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
-    NSDateComponents *comps = [calendar components:NSCalendarUnitWeekday fromDate:date];
-    NSDateFormatter *df = [[NSDateFormatter alloc] init];
-    df.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
-    
-    //comps.weekdayは 1-7の値が取得できるので-1する
-    NSString *weekDayStr = df.shortWeekdaySymbols[comps.weekday-1];
-    return weekDayStr;
-}
-
-// cellのサイズ
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout
-                                            sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSInteger numberOfMargin = 8;
-    CGFloat width = floorf((collectionView.frame.size.width - CellMargin * numberOfMargin) / DaysPerWeek);
-    CGFloat height = width * 2.0f;
-    
-    return CGSizeMake(width, height);
-}
-
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
-                                                  insetForSectionAtIndex:(NSInteger)section
-{
-    return UIEdgeInsetsMake(CellMargin, CellMargin, CellMargin, CellMargin);
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
-                                minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
-    return CellMargin;
-}
-
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout
-                           minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
-    return CellMargin;
-}
-
 @end
-

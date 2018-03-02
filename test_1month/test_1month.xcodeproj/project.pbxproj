@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6409E166203FE38400E3588B /* CollectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6409E165203FE38400E3588B /* CollectionModel.m */; };
+		64226294203ECB41000789A1 /* CollectionViewProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 64226293203ECB41000789A1 /* CollectionViewProvider.m */; };
 		64C6201C203E51EF00067A65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64C6201B203E51EF00067A65 /* AppDelegate.m */; };
 		64C62022203E51EF00067A65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64C62020203E51EF00067A65 /* Main.storyboard */; };
 		64C62024203E51EF00067A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64C62023203E51EF00067A65 /* Assets.xcassets */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6409E164203FE38400E3588B /* CollectionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionModel.h; sourceTree = "<group>"; };
+		6409E165203FE38400E3588B /* CollectionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionModel.m; sourceTree = "<group>"; };
+		64226292203ECB41000789A1 /* CollectionViewProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewProvider.h; sourceTree = "<group>"; };
+		64226293203ECB41000789A1 /* CollectionViewProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewProvider.m; sourceTree = "<group>"; };
 		64C62017203E51EF00067A65 /* test_1month.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_1month.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64C6201A203E51EF00067A65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		64C6201B203E51EF00067A65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -81,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		64226291203EBFB8000789A1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				64C6204F203E5FA900067A65 /* CalendarViewCell.h */,
+				64C62050203E5FA900067A65 /* CalendarViewCell.m */,
+				64226292203ECB41000789A1 /* CollectionViewProvider.h */,
+				64226293203ECB41000789A1 /* CollectionViewProvider.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		64C6200E203E51EF00067A65 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				64C62053203EB30600067A65 /* Model */,
+				64226291203EBFB8000789A1 /* View */,
 				64C62052203EB2E700067A65 /* ViewController */,
 				64C62055203EB31F00067A65 /* Support */,
 				64C62056203EB34900067A65 /* StartUp */,
@@ -144,18 +162,10 @@
 		64C62053203EB30600067A65 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				64C62054203EB30C00067A65 /* DAO */,
+				6409E164203FE38400E3588B /* CollectionModel.h */,
+				6409E165203FE38400E3588B /* CollectionModel.m */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		64C62054203EB30C00067A65 /* DAO */ = {
-			isa = PBXGroup;
-			children = (
-				64C6204F203E5FA900067A65 /* CalendarViewCell.h */,
-				64C62050203E5FA900067A65 /* CalendarViewCell.m */,
-			);
-			path = DAO;
 			sourceTree = "<group>";
 		};
 		64C62055203EB31F00067A65 /* Support */ = {
@@ -311,7 +321,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64C62051203E5FA900067A65 /* CalendarViewCell.m in Sources */,
+				6409E166203FE38400E3588B /* CollectionModel.m in Sources */,
 				64C6204E203E53D900067A65 /* CalendarViewController.m in Sources */,
+				64226294203ECB41000789A1 /* CollectionViewProvider.m in Sources */,
 				64C6202A203E51EF00067A65 /* main.m in Sources */,
 				64C6201C203E51EF00067A65 /* AppDelegate.m in Sources */,
 			);

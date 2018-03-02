@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+extern const NSUInteger DaysPerWeek;
+extern const CGFloat CellMargin;
+
 @interface CalendarViewController : UICollectionViewController
+
+- (NSDate *)firstDateOfMonth;
+- (NSDate *)dateForCellAtIndexPath:(NSIndexPath *)indexPath;
 
 @end
