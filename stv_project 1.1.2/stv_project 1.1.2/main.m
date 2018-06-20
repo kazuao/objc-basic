@@ -6,27 +6,33 @@
 //  Copyright © 2018年 kazua. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
     
-    NSArray *foodArr  = @[@"醤油", @"味噌", @"塩", @"豚骨"];
-    NSLog(@"%@", foodArr[0]);
-    NSLog(@"%@", foodArr[1]);
-    NSLog(@"%@", foodArr[2]);
-    NSLog(@"%@", foodArr[3]);
-    NSString *arrString = [NSString stringWithFormat:@"%@",foodArr];
-    NSString *arrUTFNonLossyASCIIStringEncoding = [NSString stringWithCString:[arrString cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
+    // arrayの課題
+    NSArray *foodArray  = @[@"醤油", @"味噌", @"塩", @"豚骨"];
+    NSLog(@"醤油 = %@", foodArray[0]);
+    NSLog(@"味噌 = %@", foodArray[1]);
+    NSLog(@"塩 = %@", foodArray[2]);
+    NSLog(@"豚骨 = %@", foodArray[3]);
+    
+    // arrayを一括出力した際に文字化けする問題対策
+    NSString *arrString = [NSString stringWithFormat:@"%@",foodArray];
+    NSString *arrUTFNonLossyASCIIStringEncoding =
+    [NSString stringWithCString:[arrString cStringUsingEncoding:NSUTF8StringEncoding]
+                       encoding:NSNonLossyASCIIStringEncoding];
     NSLog(@"afterFormat : %@", arrUTFNonLossyASCIIStringEncoding);
     
-    NSDictionary *nutriDic = @{@"protein": @"タンパク質",
+    // dictionaryの課題
+    NSDictionary *nutrientsDictionary = @{@"protein": @"タンパク質",
                                @"fat"    : @"脂肪",
                                @"carb"   : @"炭水化物"
                                };
-    NSLog(@"%@", nutriDic[@"protein"]);
-    NSLog(@"%@", nutriDic[@"fat"]);
-    NSLog(@"%@", nutriDic[@"carb"]);
+    NSLog(@"タンパク質 = %@", nutrientsDictionary[@"protein"]);
+    NSLog(@"脂肪 = %@", nutrientsDictionary[@"fat"]);
+    NSLog(@"炭水化物 = %@", nutrientsDictionary[@"carb"]);
     
     return 0;
 }

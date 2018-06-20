@@ -7,10 +7,9 @@
 //
 
 #import "ViewController.h"
-#import "FavoriteProgrammingLanguage.h"
 #import "Account.h"
 
-@interface ViewController ()<FavoriteProgrammingLanguageDelegate>
+@interface ViewController ()
 
 @end
 
@@ -18,14 +17,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // 個人の設定
+    Account *ken = [[Account new]
+                    initWithName:@"ken"
+                    age:29
+                    sex:@"man"
+                    strongLang:@"PHP"];
+    
+    Account *aya = [[Account new]
+                    initWithName:@"aya"
+                    age:26
+                    sex:@"woman"
+                    strongLang:@"swift"];
+    
+    
+    NSArray *team = @[ken, aya];
+    
+    for (Account *person in team){
+        [person printAccount];
+    }
 }
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 
 @end

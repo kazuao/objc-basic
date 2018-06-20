@@ -8,28 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "Account.h"
+
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        // 個人の設定
-        Account *ken = [[Account alloc]
-                        initWithName:@"ken"
-                        age:29
-                        sex:@"man"
-                        strongLang:@"PHP"];
-        
-        Account *aya = [[Account alloc]
-                        initWithName:@"aya"
-                        age:26
-                        sex:@"woman"
-                        strongLang:@"swift"];
-        
-        NSArray *team = @[ken, aya];
-        
-        for (Account *person in team) {
-            [person printAccount];
-        }
+
         return 0;
     }
 }

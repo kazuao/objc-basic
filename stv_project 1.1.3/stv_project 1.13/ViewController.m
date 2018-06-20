@@ -40,22 +40,22 @@
     NSString *compareStr1 = @"a";
     NSString *compareStr2 = @"b";
     NSString *isSameStr = (compareStr1 == compareStr2)? @"同じ": @"違う";
-    NSLog(@"%@", isSameStr);
+    NSLog(@"どっち? = %@", isSameStr);
     
     // for文
     for (int i = 0; i <= 10; i++){
-        NSLog(@"%d", i);
+        NSLog(@"%d回目", i);
     }
     
     // 高速列挙構文
     NSArray *colorArr = @[@"赤", @"青", @"緑"];
     for (NSString *color in colorArr){
-        NSLog(@"%@", color);
+        NSLog(@"今の色は%@", color);
     }
     
     NSDictionary *colorDic = @{@"red": @"赤", @"blue": @"青", @"green": @"緑"};
     for (NSString *key in colorDic){
-        NSLog(@"%@: %@", key, colorDic[key]);
+        NSLog(@"%@は%@", key, colorDic[key]);
     }
     // switch文
     NSInteger switchInt = 2;
@@ -72,12 +72,6 @@
         default:
             break;
     }
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

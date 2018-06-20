@@ -7,9 +7,8 @@
 //
 
 #import "Account.h"
-#import "FavoriteProgrammingLanguage.h"
 
-@implementation Account
+@implementation Account 
 
 // 初期化をしている
 -(id)initWithName:(NSString *)name
@@ -31,13 +30,15 @@
     } else {
         NSLog(@"%@さんは、%@が得意な%ld歳です。",self.name, self.strongLang, self.age);
     }
-    //memo 迷った末、ここでインスタンス化/メソッド使用
+    
+    // instance化&methodの使用
     FavoriteProgrammingLanguage *favoriteProgrammingLanguage =
     [FavoriteProgrammingLanguage new];
     favoriteProgrammingLanguage.delegate = self;
     [favoriteProgrammingLanguage joinIntern];
 }
 
+// delegate method
 -(void)canDoObjC{
     if ([self.sex isEqual: @"man"]){
         NSLog(@"%@君はObjective-Cができるよ！", self.name);

@@ -7,18 +7,31 @@
 //
 
 #import "ViewController.h"
+#import "Account.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-}
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    // accountのinstance化
+    Account *ken = [[Account alloc]
+                    initWithName:@"ken"
+                    age:29
+                    sex:@"man"
+                    strongLang:@"PHP"];
+    
+    Account *aya = [[Account alloc]
+                    initWithName:@"aya"
+                    age:26
+                    sex:@"woman"
+                    strongLang:@"swift"];
+    
+    NSArray *team = @[ken, aya];
+    
+    for (Account *person in team) {
+        [person printAccount];
+    }
 }
 
 @end

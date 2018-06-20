@@ -13,8 +13,6 @@
 		6415CAD2200F2786006CE433 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6415CAD1200F2786006CE433 /* Assets.xcassets */; };
 		6415CAD5200F2786006CE433 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6415CAD3200F2786006CE433 /* LaunchScreen.storyboard */; };
 		6415CAD8200F2786006CE433 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415CAD7200F2786006CE433 /* main.m */; };
-		6415CAE2200F2786006CE433 /* stv_project_1_1_4Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415CAE1200F2786006CE433 /* stv_project_1_1_4Tests.m */; };
-		6415CAED200F2786006CE433 /* stv_project_1_1_4UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415CAEC200F2786006CE433 /* stv_project_1_1_4UITests.m */; };
 		6415CB7B2010005E006CE433 /* Account.m in Sources */ = {isa = PBXBuildFile; fileRef = 6415CB7A2010005E006CE433 /* Account.m */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +45,7 @@
 		6415CAD6200F2786006CE433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6415CAD7200F2786006CE433 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6415CADD200F2786006CE433 /* stv_project 1.1.4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 1.1.4Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6415CAE1200F2786006CE433 /* stv_project_1_1_4Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_1_1_4Tests.m; sourceTree = "<group>"; };
-		6415CAE3200F2786006CE433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6415CAE8200F2786006CE433 /* stv_project 1.1.4UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 1.1.4UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6415CAEC200F2786006CE433 /* stv_project_1_1_4UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_1_1_4UITests.m; sourceTree = "<group>"; };
-		6415CAEE200F2786006CE433 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6415CB792010005E006CE433 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		6415CB7A2010005E006CE433 /* Account.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Account.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,8 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				6415CAC7200F2785006CE433 /* stv_project 1.1.4 */,
-				6415CAE0200F2786006CE433 /* stv_project 1.1.4Tests */,
-				6415CAEB200F2786006CE433 /* stv_project 1.1.4UITests */,
 				6415CAC6200F2785006CE433 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,24 +109,6 @@
 				6415CAD7200F2786006CE433 /* main.m */,
 			);
 			path = "stv_project 1.1.4";
-			sourceTree = "<group>";
-		};
-		6415CAE0200F2786006CE433 /* stv_project 1.1.4Tests */ = {
-			isa = PBXGroup;
-			children = (
-				6415CAE1200F2786006CE433 /* stv_project_1_1_4Tests.m */,
-				6415CAE3200F2786006CE433 /* Info.plist */,
-			);
-			path = "stv_project 1.1.4Tests";
-			sourceTree = "<group>";
-		};
-		6415CAEB200F2786006CE433 /* stv_project 1.1.4UITests */ = {
-			isa = PBXGroup;
-			children = (
-				6415CAEC200F2786006CE433 /* stv_project_1_1_4UITests.m */,
-				6415CAEE200F2786006CE433 /* Info.plist */,
-			);
-			path = "stv_project 1.1.4UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6415CAE2200F2786006CE433 /* stv_project_1_1_4Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +262,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6415CAED200F2786006CE433 /* stv_project_1_1_4UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
