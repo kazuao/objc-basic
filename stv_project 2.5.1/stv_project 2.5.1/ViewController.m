@@ -31,14 +31,14 @@
 
 -(void) showComposerSheet {
     
-    MFMailComposeViewController *picker = [MFMailComposeViewController new];
-    picker.mailComposeDelegate = self;
+    MFMailComposeViewController *mail = [MFMailComposeViewController new];
+    mail.mailComposeDelegate = self;
     
     // 初期入力
-    [picker setSubject:@"ここはメールの件名"];
-    [picker setMessageBody:@"ここはメールの本文" isHTML:NO];
+    [mail setSubject:@"アプリからメール送信"];
+    [mail setMessageBody:@"ここに本文を入力してください。" isHTML:NO];
     
-    [self presentViewController:picker animated:YES completion:nil];
+    [self presentViewController:mail animated:YES completion:nil];
 }
 
 // メーラーを操作した時の操作分岐

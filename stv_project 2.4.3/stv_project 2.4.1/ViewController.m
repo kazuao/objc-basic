@@ -99,7 +99,6 @@ const NSString *getWether = @"http://weather.livedoor.com/forecast/webservice/js
         
         dispatch_async(q_main, ^{
             cell.cellImg.image = imgData;
-            [cell layoutSubviews];
         });
     });
     

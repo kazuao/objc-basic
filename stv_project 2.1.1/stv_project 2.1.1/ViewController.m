@@ -22,11 +22,9 @@
     self.stLabel.text = NSLocalizedString(@"Objective-C lecture started", @"");
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end

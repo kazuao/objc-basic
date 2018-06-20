@@ -8,10 +8,11 @@
 
 #import "ViewController.h"
 #import "WeatherTableViewCell.h"
-#import "Weather.h"
 #import "Model.h"
 #import "ModelAPI.h"
 #import "TableViewProvider.h"
+
+@class Weather;
 
 // 天気APIの取得
 NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice/json/v1?city=130010";
@@ -32,13 +33,11 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
     [super viewDidLoad];
     // いろいろインスタンス化
     self.dbModel  = [Model new];
-    self.apiModel = [ModelAPI new];
     self.provider = [TableViewProvider new];
     self.registerContents  = [Weather new];
     
     // いろいろdelegate,dataSource
     self.dbModel.delegate = self;
-    self.weatherTable.delegate = self;
     
     self.registerContents = [self.apiModel connectAPI];
 }
@@ -57,8 +56,6 @@ NSString *const VCGetWeather = @"http://weather.livedoor.com/forecast/webservice
 
 // 登録ボタンを押すとDBに登録する
 - (IBAction)registerBtn:(id)sender {
-    
-    self.apiModel = [ModelAPI new];
 
     [self.dbModel registerWeather:self.registerContents];
 

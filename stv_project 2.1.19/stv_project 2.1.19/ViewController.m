@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "SecondViewController.h"
-#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -21,15 +20,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (IBAction)pushBtn:(id)sender {
-    // サブ画面のビューコントローラを取得
-    SecondViewController *sv = [[SecondViewController alloc]init];
+    
     UIStoryboard *secondStory = [UIStoryboard storyboardWithName:@"Second" bundle:[NSBundle mainBundle]];
     // storyboard
-    sv = [secondStory instantiateInitialViewController];
+    SecondViewController *sv = [secondStory instantiateInitialViewController];
     
     sv.msgValue = self.myText.text;
     
@@ -40,8 +37,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-//AppDelegate *appDelegate;
-//appDelegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//singleView.text = appDelegate.singleString;
 
 @end

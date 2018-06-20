@@ -19,9 +19,9 @@
     
     // 課題
     // if~else文
-    NSInteger ifcheckInt = 1;
-    if (ifcheckInt == 1){
-        NSLog(@"これは%ldです", ifcheckInt);
+    NSInteger ifCheckInt = 1;
+    if (ifCheckInt == 1){
+        NSLog(@"これは%ldです", ifCheckInt);
     } else {
         NSLog(@"これは1ではありません");
     }

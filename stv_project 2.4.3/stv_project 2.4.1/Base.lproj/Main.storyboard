@@ -44,8 +44,8 @@
                                                         <constraint firstAttribute="width" constant="91" id="Xd3-ui-f7Z"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-u9-UDt">
-                                                    <rect key="frame" x="46" y="16" width="35" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="今日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMd-u9-UDt">
+                                                    <rect key="frame" x="46" y="16" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -63,7 +63,6 @@
                                                 <constraint firstItem="nGQ-jA-Msz" firstAttribute="leading" secondItem="rAv-Ui-CZZ" secondAttribute="leadingMargin" constant="16" id="PQ0-ah-CYr"/>
                                                 <constraint firstItem="VSz-qK-81t" firstAttribute="leading" secondItem="nGQ-jA-Msz" secondAttribute="trailing" constant="103" id="Qwd-P3-clc"/>
                                                 <constraint firstItem="oZE-26-YPY" firstAttribute="top" secondItem="VSz-qK-81t" secondAttribute="bottom" constant="26" id="RCj-fm-nb7"/>
-                                                <constraint firstItem="VSz-qK-81t" firstAttribute="leading" secondItem="AMd-u9-UDt" secondAttribute="trailing" constant="157" id="V4K-TU-cSC"/>
                                                 <constraint firstItem="VSz-qK-81t" firstAttribute="top" secondItem="rAv-Ui-CZZ" secondAttribute="topMargin" constant="16" id="XWN-oX-VIB"/>
                                                 <constraint firstItem="nGQ-jA-Msz" firstAttribute="top" secondItem="AMd-u9-UDt" secondAttribute="bottom" constant="20" id="gDY-26-bjf"/>
                                                 <constraint firstItem="oZE-26-YPY" firstAttribute="leading" secondItem="rAv-Ui-CZZ" secondAttribute="leadingMargin" constant="16" id="gWy-B3-9yH"/>
@@ -96,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139.5" y="132.5"/>
+            <point key="canvasLocation" x="138.40000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
 </document>

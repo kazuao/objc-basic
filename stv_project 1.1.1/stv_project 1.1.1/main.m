@@ -6,23 +6,24 @@
 //  Copyright © 2018年 kazua. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
     
-    BOOL YesOrNo = NO;
-    NSLog(@"%d", YesOrNo);
+    BOOL decisionBool = NO;
+    NSLog(@"%d", decisionBool);
 
-    NSString* sampleStr = @"hello world";
-    NSLog(@"%@", sampleStr);
+    NSString* tryString = @"hello world";
+    NSLog(@"%@", tryString);
     
-    NSInteger sampleInt = 10;
-    NSLog(@"%ld", sampleInt);
+    NSInteger tryInteger = 10;
+    NSLog(@"%ld", tryInteger);
     
     //double sampleNmb = 1.145451;
-    NSNumber *numberText = @3434.77f;
-    NSLog(@"%@", numberText);
+    NSNumber *tryNumberInt  = @3434.77f;
+    NSNumber *tryNumberBool = @YES;
+    NSLog(@"%@ - %@", tryNumberInt, tryNumberBool);
     
     return 0;
 }

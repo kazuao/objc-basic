@@ -127,8 +127,8 @@
 -(void)deleteTodo {
 // 下準備
     // 現在のindexPathを取得
-    NSIndexPath *rocalIndexPath = self.deletePath;
-    TodoList *todoList = self.todoLists[rocalIndexPath.row];
+    NSIndexPath *localIndexPath = self.deletePath;
+    TodoList *todoList = self.todoLists[localIndexPath.row];
     //デリートフラグのfalse
     NSInteger delete_false = 1;
     // 現在時刻の取得

@@ -6,9 +6,9 @@
 //  Copyright © 2018年 kazua. All rights reserved.
 //
 
+@import UIKit;
 #import <Foundation/Foundation.h>
 #import "Weather.h"
-@import UIKit;
 
 @interface TableViewProvider : NSObject <UITableViewDataSource>
 

@@ -14,9 +14,12 @@
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
-    NSLog(@"url - %@", url.query);
+    NSLog(@"url - %@", url.scheme);
+    NSLog(@"source - %@", options);
     NSString *encodeUrl = [url.query stringByRemovingPercentEncoding];
     NSLog(@"encode - %@", encodeUrl);
     if (encodeUrl) {

@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()<UIPickerViewDelegate,UIPickerViewDataSource>
+@interface ViewController () <UIPickerViewDelegate,UIPickerViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *sampleLabel;
 @property (weak, nonatomic) IBOutlet UIPickerView *samplePicker;
@@ -36,26 +36,29 @@
 
 // labelがtouchされた時の処理
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if ([event touchesForView:self.sampleLabel]){
+    if ([event touchesForView:self.sampleLabel]) {
         [self enablePicker];
+        NSLog(@"aaa");
     } else {
         [self disablePicker];
     }
 }
+
 // doneを押した時の処理
 - (IBAction)doneBtn:(UIBarButtonItem *)sender {
     [self disablePicker];
 }
-        // pickerを出す
-        - (void)enablePicker{
-            self.samplePicker.hidden  = NO;
-            self.sampleToolBar.hidden = NO;
-        }
-        // pickerを消す
-        - (void)disablePicker{
-            self.samplePicker.hidden  = YES;
-            self.sampleToolBar.hidden = YES;
-        }
+
+// pickerを出す
+- (void)enablePicker{
+    self.samplePicker.hidden  = NO;
+    self.sampleToolBar.hidden = NO;
+}
+// pickerを消す
+- (void)disablePicker{
+    self.samplePicker.hidden  = YES;
+    self.sampleToolBar.hidden = YES;
+}
 
 // pickerに列数を返す
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{

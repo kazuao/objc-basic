@@ -13,10 +13,9 @@
 -(void)canDoObjC;
 @end
 
-@interface FavoriteProgrammingLanguage : NSObject
-@property (nonatomic, weak)
-        id<FavoriteProgrammingLanguageDelegate> delegate;
-        //memo ↑デリゲートプロパティにFPLDプロトコルを付与する
+@interface FavoriteProgrammingLanguage: NSObject
+@property (nonatomic, weak) id<FavoriteProgrammingLanguageDelegate> delegate;
+                            //memo ↑デリゲートプロパティにFPLDプロトコルを付与する
 
 -(void)joinIntern;
 @end

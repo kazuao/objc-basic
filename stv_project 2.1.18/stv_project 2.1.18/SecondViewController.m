@@ -26,7 +26,7 @@
 
 - (IBAction)popBtn:(id)sender {
     // navigationControllerで遷移
-    [self.navigationController popViewController Animated:YES];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 /*
 #pragma mark - Navigation

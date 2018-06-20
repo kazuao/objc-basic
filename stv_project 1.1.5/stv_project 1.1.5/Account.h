@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "FavoriteProgrammingLanguage.h"
 
-                        //memo ↓採用するプロトコル 入れなくてもエラーはでない(警告のみ
 @interface Account:NSObject <FavoriteProgrammingLanguageDelegate>
 
 @property NSString  *name;

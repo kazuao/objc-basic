@@ -9,7 +9,8 @@
 #import "Model.h"
 #import "FMDB.h"
 #import "ViewController.h"
-#import "Weather.h"
+
+@class Weather;
 
 @implementation Model
 
@@ -93,7 +94,6 @@
     }
     [results close];
     [fm close];
-    
 }
 
 @end

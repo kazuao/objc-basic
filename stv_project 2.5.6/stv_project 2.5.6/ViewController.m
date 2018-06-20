@@ -44,8 +44,10 @@
     CLLocation *location = [locations lastObject];
     // 緯度 %+.6f
     self.labelLatitude.text  = [NSString stringWithFormat:@"%+.6f", location.coordinate.latitude];
+    NSLog(@"%@", [NSString stringWithFormat:@"%+.6f", location.coordinate.latitude]);
     // 経度 %+.6f
     self.labelLongitude.text = [NSString stringWithFormat:@"%+.6f", location.coordinate.longitude];
+    NSLog(@"%@", [NSString stringWithFormat:@"%+.6f", location.coordinate.longitude]);
 }
 
 - (void)didReceiveMemoryWarning {

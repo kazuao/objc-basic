@@ -13,13 +13,13 @@
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         // 個人の設定
-        Account *ken = [[Account new]
+        Account *ken = [[Account alloc]
                         initWithName:@"ken"
                         age:29
                         sex:@"man"
                         strongLang:@"PHP"];
         
-        Account *aya = [[Account new]
+        Account *aya = [[Account alloc]
                         initWithName:@"aya"
                         age:26
                         sex:@"woman"
@@ -27,7 +27,7 @@ int main(int argc, char * argv[]) {
         
         NSArray *team = @[ken, aya];
         
-        for (Account *person in team){
+        for (Account *person in team) {
             [person printAccount];
         }
         return 0;

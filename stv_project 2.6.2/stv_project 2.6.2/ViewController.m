@@ -21,12 +21,12 @@
 
 - (IBAction)getParam:(id)sender {
     
-    AppDelegate *ad = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
 
     self.param1.hidden = NO;
     self.param2.hidden = NO;
-    self.param1.text = ad.result[@"sample1"];
-    self.param2.text = ad.result[@"sample2"];
+    self.param1.text = appDelegate.result[@"sample1"];
+    self.param2.text = appDelegate.result[@"sample2"];
 }
 
 - (void)viewDidLoad {

@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, Class){
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 @property (strong,nonatomic) NSArray *imgAnimal;
 @property (strong,nonatomic) NSArray *imgFish;
 @property (strong,nonatomic) NSArray *imgAnimalTitles;
@@ -87,6 +88,13 @@ typedef NS_ENUM(NSInteger, Class){
     }
     return rows;
 }
+
+//-(CGFloat) tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath*)indexPath {
+//
+//    UITableViewCell *cell = (UITableViewCell*)[self tableView:self.myTableView cellForRowAtIndexPath:indexPath];
+//
+//    return cell.frame.size.height;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     

@@ -24,7 +24,7 @@
 - (IBAction)cameraStart:(id)sender {
     
     // カメラの利用
-    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;
+    UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     // 利用可能チェック
     if ([UIImagePickerController isSourceTypeAvailable:sourceType]) {
         UIImagePickerController *cameraPicker = [UIImagePickerController new];

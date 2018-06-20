@@ -18,13 +18,12 @@ int main(int argc, char * argv[]) {
     NSLog(@"%@", foodArr[3]);
     NSString *arrString = [NSString stringWithFormat:@"%@",foodArr];
     NSString *arrUTFNonLossyASCIIStringEncoding = [NSString stringWithCString:[arrString cStringUsingEncoding:NSUTF8StringEncoding] encoding:NSNonLossyASCIIStringEncoding];
-    NSLog(@"arrUTFNonLossyASCIIStringEncoding:%@", arrUTFNonLossyASCIIStringEncoding);
-//    NSLog(@"%@", foodArr);
+    NSLog(@"afterFormat : %@", arrUTFNonLossyASCIIStringEncoding);
     
     NSDictionary *nutriDic = @{@"protein": @"タンパク質",
-                          @"fat"    : @"脂肪",
-                          @"carb"   : @"炭水化物"
-                          };
+                               @"fat"    : @"脂肪",
+                               @"carb"   : @"炭水化物"
+                               };
     NSLog(@"%@", nutriDic[@"protein"]);
     NSLog(@"%@", nutriDic[@"fat"]);
     NSLog(@"%@", nutriDic[@"carb"]);
