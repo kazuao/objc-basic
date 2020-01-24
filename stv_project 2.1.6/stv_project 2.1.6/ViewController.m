@@ -49,7 +49,7 @@
 //     DidLoadだとヒエラルキーエラーがでる
 - (void)viewDidAppear:(BOOL)animated {
     // urlの指定
-    NSURL *url = [NSURL URLWithString:@"http://www.apple.com/jp"];
+    NSURL *url = [NSURL URLWithString:@"https://www.toshiba.co.jp/index_j.htm"];
     NSURLRequest *urlReq = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:urlReq];
 }

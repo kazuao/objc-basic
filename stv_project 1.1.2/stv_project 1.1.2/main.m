@@ -27,9 +27,11 @@ int main(int argc, char * argv[]) {
     
     // dictionaryの課題
     NSDictionary *nutrientsDictionary = @{@"protein": @"タンパク質",
-                               @"fat"    : @"脂肪",
-                               @"carb"   : @"炭水化物"
-                               };
+                                          @"fat"    : @"脂肪",
+                                          @"carb"   : @"炭水化物"
+                                          
+    };
+    
     NSLog(@"タンパク質 = %@", nutrientsDictionary[@"protein"]);
     NSLog(@"脂肪 = %@", nutrientsDictionary[@"fat"]);
     NSLog(@"炭水化物 = %@", nutrientsDictionary[@"carb"]);

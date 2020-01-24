@@ -13,8 +13,6 @@
 		64A7344F2013565F00EEADCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A7344E2013565F00EEADCB /* Assets.xcassets */; };
 		64A734522013565F00EEADCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A734502013565F00EEADCB /* LaunchScreen.storyboard */; };
 		64A734552013565F00EEADCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A734542013565F00EEADCB /* main.m */; };
-		64A7345F2013565F00EEADCB /* stv_project_2_1_5Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A7345E2013565F00EEADCB /* stv_project_2_1_5Tests.m */; };
-		64A7346A2013566000EEADCB /* stv_project_2_1_5UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A734692013566000EEADCB /* stv_project_2_1_5UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,11 +44,7 @@
 		64A734532013565F00EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A734542013565F00EEADCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64A7345A2013565F00EEADCB /* stv_project 2.1.5Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.1.5Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64A7345E2013565F00EEADCB /* stv_project_2_1_5Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_1_5Tests.m; sourceTree = "<group>"; };
-		64A734602013565F00EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A734652013565F00EEADCB /* stv_project 2.1.5UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.1.5UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64A734692013566000EEADCB /* stv_project_2_1_5UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_1_5UITests.m; sourceTree = "<group>"; };
-		64A7346B2013566000EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				64A734442013565F00EEADCB /* stv_project 2.1.5 */,
-				64A7345D2013565F00EEADCB /* stv_project 2.1.5Tests */,
-				64A734682013565F00EEADCB /* stv_project 2.1.5UITests */,
 				64A734432013565F00EEADCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -112,24 +104,6 @@
 				64A734542013565F00EEADCB /* main.m */,
 			);
 			path = "stv_project 2.1.5";
-			sourceTree = "<group>";
-		};
-		64A7345D2013565F00EEADCB /* stv_project 2.1.5Tests */ = {
-			isa = PBXGroup;
-			children = (
-				64A7345E2013565F00EEADCB /* stv_project_2_1_5Tests.m */,
-				64A734602013565F00EEADCB /* Info.plist */,
-			);
-			path = "stv_project 2.1.5Tests";
-			sourceTree = "<group>";
-		};
-		64A734682013565F00EEADCB /* stv_project 2.1.5UITests */ = {
-			isa = PBXGroup;
-			children = (
-				64A734692013566000EEADCB /* stv_project_2_1_5UITests.m */,
-				64A7346B2013566000EEADCB /* Info.plist */,
-			);
-			path = "stv_project 2.1.5UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +168,7 @@
 		64A7343A2013565F00EEADCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = kazua;
 				TargetAttributes = {
 					64A734412013565F00EEADCB = {
@@ -275,7 +249,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A7345F2013565F00EEADCB /* stv_project_2_1_5Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +256,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A7346A2013566000EEADCB /* stv_project_2_1_5UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +308,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -343,6 +316,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -391,6 +365,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -398,6 +373,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

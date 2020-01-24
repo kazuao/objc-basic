@@ -11,12 +11,9 @@
 @implementation Account
 
 // 初期化
--(id)initWithName:(NSString *)name
-              age:(NSInteger)age
-              sex:(NSString*)sex
-       strongLang:(NSString*)strongLang {
+- (id)initWithName:(NSString *)name age:(NSInteger)age sex:(NSString*)sex strongLang:(NSString*)strongLang {
     
-    if(self = [super init]) {
+    if (self = [super init]) {
         self.name       = name;
         self.age        = age;
         self.sex        = sex;
@@ -25,10 +22,11 @@
     return self;
 }
 
--(void)printAccount{
+- (void)printAccount {
     
     if ([self.sex isEqual: @"man"]) {
         NSLog(@"%@くんは、%@が得意な%ld歳です。", self.name, self.strongLang, self.age);
+        
     } else {
         NSLog(@"%@さんは、%@が得意な%ld歳です。", self.name, self.strongLang, self.age);
     }

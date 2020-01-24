@@ -13,8 +13,6 @@
 		64A733552013112C00EEADCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A733542013112C00EEADCB /* Assets.xcassets */; };
 		64A733582013112C00EEADCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64A733562013112C00EEADCB /* LaunchScreen.storyboard */; };
 		64A7335B2013112C00EEADCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A7335A2013112C00EEADCB /* main.m */; };
-		64A733652013112C00EEADCB /* stv_project_2_1_3Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A733642013112C00EEADCB /* stv_project_2_1_3Tests.m */; };
-		64A733702013112C00EEADCB /* stv_project_2_1_3UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A7336F2013112C00EEADCB /* stv_project_2_1_3UITests.m */; };
 		64A7337E2013118A00EEADCB /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64A7337D2013118A00EEADCB /* Media.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -47,11 +45,7 @@
 		64A733592013112C00EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A7335A2013112C00EEADCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		64A733602013112C00EEADCB /* stv_project 2.1.3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.1.3Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64A733642013112C00EEADCB /* stv_project_2_1_3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_1_3Tests.m; sourceTree = "<group>"; };
-		64A733662013112C00EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A7336B2013112C00EEADCB /* stv_project 2.1.3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "stv_project 2.1.3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		64A7336F2013112C00EEADCB /* stv_project_2_1_3UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = stv_project_2_1_3UITests.m; sourceTree = "<group>"; };
-		64A733712013112C00EEADCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64A7337D2013118A00EEADCB /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,10 +77,7 @@
 		64A7333F2013112C00EEADCB = {
 			isa = PBXGroup;
 			children = (
-				64A7337D2013118A00EEADCB /* Media.xcassets */,
 				64A7334A2013112C00EEADCB /* stv_project 2.1.3 */,
-				64A733632013112C00EEADCB /* stv_project 2.1.3Tests */,
-				64A7336E2013112C00EEADCB /* stv_project 2.1.3UITests */,
 				64A733492013112C00EEADCB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -104,6 +95,7 @@
 		64A7334A2013112C00EEADCB /* stv_project 2.1.3 */ = {
 			isa = PBXGroup;
 			children = (
+				64A7337D2013118A00EEADCB /* Media.xcassets */,
 				64A7334B2013112C00EEADCB /* AppDelegate.h */,
 				64A7334C2013112C00EEADCB /* AppDelegate.m */,
 				64A7334E2013112C00EEADCB /* ViewController.h */,
@@ -115,24 +107,6 @@
 				64A7335A2013112C00EEADCB /* main.m */,
 			);
 			path = "stv_project 2.1.3";
-			sourceTree = "<group>";
-		};
-		64A733632013112C00EEADCB /* stv_project 2.1.3Tests */ = {
-			isa = PBXGroup;
-			children = (
-				64A733642013112C00EEADCB /* stv_project_2_1_3Tests.m */,
-				64A733662013112C00EEADCB /* Info.plist */,
-			);
-			path = "stv_project 2.1.3Tests";
-			sourceTree = "<group>";
-		};
-		64A7336E2013112C00EEADCB /* stv_project 2.1.3UITests */ = {
-			isa = PBXGroup;
-			children = (
-				64A7336F2013112C00EEADCB /* stv_project_2_1_3UITests.m */,
-				64A733712013112C00EEADCB /* Info.plist */,
-			);
-			path = "stv_project 2.1.3UITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +171,7 @@
 		64A733402013112C00EEADCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = kazua;
 				TargetAttributes = {
 					64A733472013112C00EEADCB = {
@@ -279,7 +253,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A733652013112C00EEADCB /* stv_project_2_1_3Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,7 +260,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64A733702013112C00EEADCB /* stv_project_2_1_3UITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +312,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -347,6 +320,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -395,6 +369,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -402,6 +377,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

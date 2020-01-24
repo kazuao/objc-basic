@@ -14,7 +14,7 @@ int main(int argc, char * argv[]) {
     BOOL decisionBool = NO;
     NSLog(@"%d", decisionBool);
 
-    NSString* tryString = @"hello world";
+    NSString *tryString = @"hello world";
     NSLog(@"%@", tryString);
     
     NSInteger tryInteger = 10;

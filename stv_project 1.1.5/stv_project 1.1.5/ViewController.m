@@ -19,22 +19,20 @@
     [super viewDidLoad];
     
     // 個人の設定
-    Account *ken = [[Account new]
-                    initWithName:@"ken"
-                    age:29
-                    sex:@"man"
-                    strongLang:@"PHP"];
+    Account *ken = [[Account new] initWithName:@"ken"
+                                           age:29
+                                           sex:@"man"
+                                    strongLang:@"PHP"];
     
-    Account *aya = [[Account new]
-                    initWithName:@"aya"
-                    age:26
-                    sex:@"woman"
-                    strongLang:@"swift"];
+    Account *aya = [[Account new] initWithName:@"aya"
+                                           age:26
+                                           sex:@"woman"
+                                    strongLang:@"swift"];
     
     
     NSArray *team = @[ken, aya];
     
-    for (Account *person in team){
+    for (Account *person in team) {
         [person printAccount];
     }
 }

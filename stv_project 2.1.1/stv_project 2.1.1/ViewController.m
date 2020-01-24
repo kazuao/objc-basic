@@ -18,13 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.stLabel.text = NSLocalizedString(@"Objective-C lecture started", @"");
+    
+    self.stLabel.text = NSLocalizedString(@"obcLocalizedStringText", @"");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

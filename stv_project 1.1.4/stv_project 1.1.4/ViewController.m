@@ -15,17 +15,15 @@
     [super viewDidLoad];
     
     // accountのinstance化
-    Account *ken = [[Account alloc]
-                    initWithName:@"ken"
-                    age:29
-                    sex:@"man"
-                    strongLang:@"PHP"];
+    Account *ken = [[Account alloc] initWithName:@ "ken"
+                                             age: 29
+                                             sex: @"man"
+                                      strongLang: @"PHP"];
     
-    Account *aya = [[Account alloc]
-                    initWithName:@"aya"
-                    age:26
-                    sex:@"woman"
-                    strongLang:@"swift"];
+    Account *aya = [[Account alloc] initWithName:@"aya"
+                                             age:26
+                                             sex:@"woman"
+                                      strongLang:@"swift"];
     
     NSArray *team = @[ken, aya];
     

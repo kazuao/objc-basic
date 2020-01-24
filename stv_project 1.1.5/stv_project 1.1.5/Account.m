@@ -11,10 +11,8 @@
 @implementation Account 
 
 // 初期化をしている
--(id)initWithName:(NSString *)name
-              age:(NSInteger)age
-              sex:(NSString*)sex
-       strongLang:(NSString*)strongLang{
+- (id)initWithName:(NSString *)name age:(NSInteger)age sex:(NSString*)sex strongLang:(NSString*)strongLang {
+    
     if(self = [super init]){
         self.name       = name;
         self.age        = age;
@@ -24,24 +22,26 @@
     return self;
 }
 
--(void)printAccount {
-    if ([self.sex isEqual: @"man"]){
+- (void)printAccount {
+    
+    if ([self.sex isEqual: @"man"]) {
         NSLog(@"%@君は、%@が得意な%ld歳です。",self.name, self.strongLang, self.age);
+        
     } else {
         NSLog(@"%@さんは、%@が得意な%ld歳です。",self.name, self.strongLang, self.age);
     }
     
     // instance化&methodの使用
-    FavoriteProgrammingLanguage *favoriteProgrammingLanguage =
-    [FavoriteProgrammingLanguage new];
+    FavoriteProgrammingLanguage *favoriteProgrammingLanguage = [FavoriteProgrammingLanguage new];
     favoriteProgrammingLanguage.delegate = self;
     [favoriteProgrammingLanguage joinIntern];
 }
 
 // delegate method
--(void)canDoObjC{
-    if ([self.sex isEqual: @"man"]){
+- (void)canDoObjC {
+    if ([self.sex isEqual: @"man"]) {
         NSLog(@"%@君はObjective-Cができるよ！", self.name);
+        
     }else{
         NSLog(@"%@さんはObjective-Cができるよ！", self.name);
     }

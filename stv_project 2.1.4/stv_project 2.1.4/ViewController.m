@@ -16,40 +16,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)alertBtn:(UIButton *)sender {
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Sample Alert"
-                                                                             message:@"どちらかのボタンを押してください"
-                                                                      preferredStyle:UIAlertControllerStyleAlert];
     
-    [alertController addAction:[UIAlertAction
-                                actionWithTitle:@"OK"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction *action) {
-                                    [self otherButtonPushed];
-                                }]];
+    UIAlertController *alertController =
+    [UIAlertController alertControllerWithTitle: @"Sample Alert"
+                                        message: @"どちらかのボタンを押してください"
+                                 preferredStyle: UIAlertControllerStyleAlert];
     
-    [alertController addAction:[UIAlertAction
-                                actionWithTitle:@"cancel"
-                                style:UIAlertActionStyleDefault
-                                handler:^(UIAlertAction *action) {
-                                    [self cancelButtonPushed];
-                                }]];
+    [alertController addAction: [UIAlertAction actionWithTitle: @"OK"
+                                                         style: UIAlertActionStyleDefault
+                                                       handler: ^(UIAlertAction *action) {
+        [self otherButtonPushed];
+    }]];
+    
+    [alertController addAction: [UIAlertAction actionWithTitle: @"cancel"
+                                                         style: UIAlertActionStyleDefault
+                                                       handler: ^(UIAlertAction *action) {
+        [self cancelButtonPushed];
+    }]];
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
--(void)otherButtonPushed{
+
+-(void)otherButtonPushed {
     NSLog(@"OKボタンを押しました。");
 };
--(void)cancelButtonPushed{
-//    NSLog(@"cancelボタンを押しました。");
+
+-(void)cancelButtonPushed {
+    NSLog(@"cancelボタンを押しました。");
 }
 
 @end

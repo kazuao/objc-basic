@@ -15,11 +15,8 @@
 @property NSString  *sex;
 @property NSString  *strongLang;
 
--(id)initWithName:(NSString *)name
-              age:(NSInteger)age
-              sex:(NSString*)sex
-       strongLang:(NSString*)strongLang;
+- (id)initWithName:(NSString *)name age:(NSInteger)age sex:(NSString*)sex strongLang:(NSString*)strongLang;
 
--(void)printAccount;
+- (void)printAccount;
 
 @end

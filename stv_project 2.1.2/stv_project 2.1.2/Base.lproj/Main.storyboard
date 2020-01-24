@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,10 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="mBq-FV-o5N">
-                                <rect key="frame" x="30" y="215" width="315" height="236"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="mBq-FV-o5N" secondAttribute="height" multiplier="670:503" id="e94-Yc-bja"/>
-                                </constraints>
+                                <rect key="frame" x="30" y="30" width="315" height="607"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
@@ -34,10 +28,12 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mBq-FV-o5N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4qH-Fe-S5Q"/>
-                            <constraint firstItem="mBq-FV-o5N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9m9-1Z-h3p"/>
-                            <constraint firstItem="mBq-FV-o5N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="Vuo-SW-eCW"/>
-                            <constraint firstAttribute="trailing" secondItem="mBq-FV-o5N" secondAttribute="trailing" constant="30" id="aQm-Rj-5ss"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mBq-FV-o5N" secondAttribute="bottom" constant="30" id="2pb-ai-B5S"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mBq-FV-o5N" secondAttribute="trailing" constant="30" id="7LG-mS-I5I"/>
+                            <constraint firstItem="mBq-FV-o5N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rTa-6g-5GF"/>
+                            <constraint firstItem="mBq-FV-o5N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0D-Jl-4i9"/>
+                            <constraint firstItem="mBq-FV-o5N" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="xtR-eV-zpg"/>
+                            <constraint firstItem="mBq-FV-o5N" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="30" id="zvW-5W-ycb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
